@@ -5,7 +5,7 @@ const NavBar = props => {
 	return (
 		<nav className="NavBar">
 			{props.routes.map(({ key, path }) => (
-				<Link key={key} to={path}>
+				<Link className="links" key={key} to={path}>
 					{key}
 				</Link>
 			))}

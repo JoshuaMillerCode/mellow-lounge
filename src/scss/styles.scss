@@ -6,12 +6,39 @@ body {
   font-size: 16px;
 }
 
-.NavBar {
+  .head{
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    
+    color: white;
+  }
+
+  .main-body{
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  background-color: #f0f0f0;
+    .NavBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 15vw;
+    height: 80vh;
+    background-color: #f0f0f0;
+    .links {
+      font-size: 25px;
+    }
+  }
+  .main {
+    height: 80vh;
+    width: 80vw
+  }
 }
+
+
+
 
 .HomePage {
 

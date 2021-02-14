@@ -1,28 +1,34 @@
 import React from 'react';
-import App from '../pages/App';
+import Search from '../pages/Search';
 import About from '../pages/About';
-import Home from '../pages/Home';
-import Contact from '../pages/Contact';
+import Feed from '../pages/Feed';
+import Recommendations from '../pages/Recommendations';
+import Favorites from '../pages/Favorites';
 
 const routes = [
-	{
-		Component: Contact,
-		key: 'Contact',
-		path: '/contact'
-	},
-	{
-		Component: Home,
-		key: 'Home',
-		path: '/home'
-	},
 	{
 		Component: About,
 		key: 'About',
 		path: '/about'
 	},
 	{
-		Component: App,
-		key: 'App',
+		Component: Feed,
+		key: 'Feed',
+		path: '/feed'
+	},
+	{
+		Component: Recommendations,
+		key: 'Recommendations',
+		path: '/recommendations'
+	},
+	{
+		Component: Favorites,
+		key: 'Favorites',
+		path: '/favorites'
+	},
+	{
+		Component: Search,
+		key: 'Search',
 		path: '/'
 	}
 ];
