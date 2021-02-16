@@ -1,12 +1,11 @@
-// require('dotenv').config();
 import React, { useState, useEffect } from 'react';
 
-export default function Search(props) {
+export default function SearchTrack(props) {
 	const [musicResults, setMusicResults] = useState([]);
 
 	const [query, updateQuery] = useState({
-		baseURL: 'http://ws.audioscrobbler.com/2.0/?method=album.search',
-		type: '&album=',
+		baseURL: 'http://ws.audioscrobbler.com/2.0/?method=track.search',
+		type: '&track=',
 		searchOption: '',
 		apiKey: '&api_key=e5c62ee23fd6bb4b9870020e49b58615',
 		format: '&format=json',
@@ -18,13 +17,13 @@ export default function Search(props) {
 			try {
 				const response = await fetch(query.searchURL);
 				const data = await response.json();
-				await setMusicResults(data.results.albummatches.album);
+				await setMusicResults(data.results.trackmatches.track);
 			} catch (error) {
 				console.error(error);
 			} finally {
 				updateQuery({
-					baseURL: 'http://ws.audioscrobbler.com/2.0/?method=album.search',
-					type: '&album=',
+					baseURL: 'http://ws.audioscrobbler.com/2.0/?method=track.search',
+					type: '&track=',
 					searchOption: '',
 					apiKey: '&api_key=e5c62ee23fd6bb4b9870020e49b58615',
 					format: '&format=json',
@@ -58,7 +57,7 @@ export default function Search(props) {
 		<div className="SearchPage">
 			<form onSubmit={handleSubmit}>
 				<label>
-					Search Artist:{' '}
+					Search Track/Artist:{' '}
 					<input type="text" id="searchOption" onChange={handleChange} />
 				</label>
 				<input type="submit" />
@@ -87,7 +86,8 @@ export default function Search(props) {
 												{
 													song: result.name,
 													artist: result.artist,
-													img: result.image[3]['#text']
+													img: result.image[3]['#text'],
+													type: 'Track'
 												}
 											])
 										});

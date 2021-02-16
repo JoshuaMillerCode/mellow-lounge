@@ -1,5 +1,6 @@
 import React from 'react';
-import Search from '../pages/Search';
+import SearchAlbum from '../pages/SearchAlbum';
+import SearchSong from '../pages/SearchSong';
 import About from '../pages/About';
 import Feed from '../pages/Feed';
 import Show from '../pages/Show';
@@ -23,13 +24,18 @@ const routes = [
 		path: '/favorites'
 	},
 	{
+		Component: SearchSong,
+		key: 'Search Track',
+		path: '/searchTrack'
+	},
+	{
 		Component: Show,
 		key: 'Show',
 		path: '/:id'
 	},
 	{
-		Component: Search,
-		key: 'Search',
+		Component: SearchAlbum,
+		key: 'Search Album',
 		path: '/'
 	}
 ];
