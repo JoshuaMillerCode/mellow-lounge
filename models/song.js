@@ -3,7 +3,7 @@ const { Schema, model } = require('mongoose');
 const songSchema = new Schema({
     song: String,
     artist: String,
-    img: Array
+    img: String
 })
 
 const Song = model('Song', songSchema);

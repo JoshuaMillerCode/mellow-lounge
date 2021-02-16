@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function Search(props) {
 	const [musicResults, setMusicResults] = useState([]);
+
 	const [query, updateQuery] = useState({
 		baseURL: 'http://ws.audioscrobbler.com/2.0/?method=album.search',
 		type: '&album=',
@@ -74,6 +75,29 @@ export default function Search(props) {
 							{result.name ? <h2>{result.name}</h2> : 'N/A'}
 
 							<h3>{result.artist}</h3>
+							<button
+								onClick={async evt => {
+									try {
+										const response = await fetch('/api/songs', {
+											method: 'POST',
+											headers: {
+												'Content-type': 'application/json'
+											},
+											body: JSON.stringify([
+												{
+													song: result.name,
+													artist: result.artist,
+													img: result.image[3]['#text']
+												}
+											])
+										});
+									} catch (error) {
+										console.error(error);
+									}
+								}}
+							>
+								Favorite
+							</button>
 						</div>
 					);
 				})}
