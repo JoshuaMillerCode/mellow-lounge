@@ -22,7 +22,7 @@ export default function Favorites(props) {
 			<div className="result-container">
 				{favorites.map(item => {
 					return (
-						<div className="results">
+						<div className="results" key={item._id}>
 							{item.img ? <img src={item.img} /> : 'N/A'}
 							{item.song ? <h2>{item.song}</h2> : 'N/A'}
 							<h3>{item.artist}</h3>
