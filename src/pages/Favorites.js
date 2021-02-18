@@ -17,7 +17,7 @@ export default function Favorites(props) {
 	});
 
 	return (
-		<div>
+		<div className="FavoritePage">
 			<h1>Your Favorites</h1>
 			<div className="result-container">
 				{favorites.map(item => {

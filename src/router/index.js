@@ -15,6 +15,7 @@ const AppRouter = props => {
 						<Route
 							key={key}
 							path={path}
+							routes={routes}
 							component={props => <Component {...props} />}
 						></Route>
 					))}

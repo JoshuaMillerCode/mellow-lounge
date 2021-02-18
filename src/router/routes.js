@@ -1,10 +1,9 @@
-import React from 'react';
 import SearchAlbum from '../pages/SearchAlbum';
 import SearchSong from '../pages/SearchSong';
+import UpdateFeedPost from '../pages/UpdateFeedPost';
 import About from '../pages/About';
 import Feed from '../pages/Feed';
 import Show from '../pages/Show';
-
 import Favorites from '../pages/Favorites';
 
 const routes = [
@@ -27,6 +26,11 @@ const routes = [
 		Component: SearchSong,
 		key: 'Search Track',
 		path: '/searchTrack'
+	},
+	{
+		Component: UpdateFeedPost,
+		key: 'UpdateFeedPost',
+		path: '/:id/edit'
 	},
 	{
 		Component: Show,

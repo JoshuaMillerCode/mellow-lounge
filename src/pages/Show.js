@@ -31,7 +31,7 @@ export default function Show(props) {
 		} catch (error) {
 			console.error(error);
 		} finally {
-			window.location.assign('/');
+			window.location.assign('/favorites');
 		}
 	};
 
@@ -48,7 +48,7 @@ export default function Show(props) {
 	};
 
 	return (
-		<div>
+		<div className="ShowPage">
 			<div className="song-container">
 				<img src={singleSong.img} />
 				<h2>{singleSong.song}</h2>
