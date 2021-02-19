@@ -19,10 +19,10 @@ export default function Favorites(props) {
 	return (
 		<div className="FavoritePage">
 			<h1>Your Favorites</h1>
-			<div className="result-container">
+			<div className="fav-result-container">
 				{favorites.map(item => {
 					return (
-						<div className="results" key={item._id}>
+						<div className="fav-results" key={item._id}>
 							{item.img ? <img src={item.img} /> : 'N/A'}
 							{item.song ? <h2>{item.song}</h2> : 'N/A'}
 							<h3>{item.artist}</h3>

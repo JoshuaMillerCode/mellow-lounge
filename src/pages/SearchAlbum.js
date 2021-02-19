@@ -59,9 +59,16 @@ export default function SearchAlbum(props) {
 			<form onSubmit={handleSubmit}>
 				<label>
 					Search Album/Artist:{' '}
-					<input type="text" id="searchOption" onChange={handleChange} />
+					<input
+						className="input-box"
+						type="text"
+						id="searchOption"
+						onChange={handleChange}
+					/>
 				</label>
-				<input type="submit" />
+				<div className="wrap">
+					<input className="button" type="submit" />
+				</div>
 			</form>
 			<div className="result-container">
 				{musicResults.map((result, index) => {

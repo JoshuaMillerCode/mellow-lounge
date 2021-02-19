@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import "reset";
 @import "grid";
 
@@ -12,13 +13,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.75);
-    
-    color: white;
+    background-color: rgba(158, 42, 43, 0.90);
+    h1 {
+      font-family: 'Shrikhand', cursive;
+      color: white;
+      font-size: 60px;
+      text-shadow: 2px 2px 4px #000000;
+    }
   }
 
   .main-body{
   display: flex;
+  
     .NavBar {
     display: flex;
     justify-content: space-around;
@@ -26,32 +32,113 @@ body {
     flex-direction: column-reverse;
     width: 15vw;
     height: 80vh;
-    background-color: #f0f0f0;
+    background-color:  rgba(255, 243, 176, 0.75);
     .links {
       font-size: 25px;
+      color: black;
+      border: 2px solid black;
+      border-radius: 5px 20px 5px;
+      height: 8vh;
+      width: 13vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: #335c67;
+        color: rgba(255, 243, 176, 0.75);
+      }
     }
   }
   .main {
     height: 80vh;
-    width: 80vw
+    width: 80vw;
   }
 }
 
 
 
 
-.HomePage {
+.SearchPage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  background-color: rgba(51, 92, 103, 0.83);
+  height: 80vh;
+  width: 90vw;
+  form {
+    display: flex;
+    flex-direction: column;
+    label {
+      color: white;
+      font-size: 20px;
+      font-family: 'Shrikhand', cursive;
+      text-shadow: 2px 2px 4px #000000;
+      margin-top: -1%;
+      margin-bottom: 2%;
+    }
+    .wrap {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .button {
+      width: 140px;
+      height: 45px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      color: #000;
+      background-color: #fff;
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        background-color: #fff3b0;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+        color: #fff;
+        text-shadow: 2px 2px 4px #000000;
+        transform: translateY(-7px);
+      }
+      }
+  }
+  .result-container {
+    height: 60vh;
+    width: 82vw;
+    margin-left: 1.8%; 
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .results {
+      height: 48vh;
+      width: 20vw;
+      margin: 2.5%;
+      color: white;
+      margin-bottom: 6%;
+      h2 {
+        font-size: 25px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+      button {
+        background-color: rgba(158, 42, 43, 0.90);
+      }
+    }
+  }
 
 }
 
 .AboutPage {
-
-}
-
-.ContactPage{
-
-}
-
-.AppPage {
 
 }

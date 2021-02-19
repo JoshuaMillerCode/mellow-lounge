@@ -72,7 +72,7 @@ export default function UpdateFeedPost(props) {
 	};
 
 	return (
-		<div className="UpdateFeedPost">
+		<div className="UpdateFeedPost ">
 			<div className="show-post">
 				{newStatus ? (
 					<>
