@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { replaceOne } from '../../models/song';
 
 export default function Show(props) {
 	const [singleSong, setSingleSong] = useState([]);

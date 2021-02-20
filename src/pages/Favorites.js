@@ -19,14 +19,16 @@ export default function Favorites(props) {
 	return (
 		<div className="FavoritePage">
 			<h1>Your Favorites</h1>
-			<div className="fav-result-container">
+			<div className="result-container">
 				{favorites.map(item => {
 					return (
-						<div className="fav-results" key={item._id}>
+						<div className="results" key={item._id}>
 							{item.img ? <img src={item.img} /> : 'N/A'}
 							{item.song ? <h2>{item.song}</h2> : 'N/A'}
 							<h3>{item.artist}</h3>
-							<Link to={`/${item._id}`}>View Song/Album</Link>
+							<Link to={`/${item._id}`} className="show-link">
+								View
+							</Link>
 						</div>
 					);
 				})}

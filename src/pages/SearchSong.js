@@ -1,13 +1,15 @@
+// require('dotenv').config();
 import React, { useState, useEffect } from 'react';
 
 export default function SearchTrack(props) {
 	const [musicResults, setMusicResults] = useState([]);
+	// const API_KEY = process.env.API_KEY;
 
 	const [query, updateQuery] = useState({
 		baseURL: 'http://ws.audioscrobbler.com/2.0/?method=track.search',
 		type: '&track=',
 		searchOption: '',
-		apiKey: '&api_key=e5c62ee23fd6bb4b9870020e49b58615',
+		apiKey: `&api_key=e5c62ee23fd6bb4b9870020e49b58615`,
 		format: '&format=json',
 		searchURL: ''
 	});
@@ -25,7 +27,7 @@ export default function SearchTrack(props) {
 					baseURL: 'http://ws.audioscrobbler.com/2.0/?method=track.search',
 					type: '&track=',
 					searchOption: '',
-					apiKey: '&api_key=e5c62ee23fd6bb4b9870020e49b58615',
+					apiKey: `&api_key=e5c62ee23fd6bb4b9870020e49b58615`,
 					format: '&format=json',
 					searchURL: ''
 				});

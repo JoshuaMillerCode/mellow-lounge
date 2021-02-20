@@ -46,11 +46,11 @@ export default function Feed(props) {
 				{feedPosts.map(post => {
 					return (
 						<div className="post" key={post._id}>
-							<Link to={`/${post._id}/edit`}>
-								<h3>{post.title}</h3>
-							</Link>
-							<h5>{post.topic}</h5>
-							<p>{post.entry}</p>
+							<h3>
+								Title: <Link to={`/${post._id}/edit`}>{post.title}</Link>
+							</h3>
+							<h5>Topic: {post.topic}</h5>
+							<p>Entry: {post.entry}</p>
 						</div>
 					);
 				})}
@@ -59,13 +59,13 @@ export default function Feed(props) {
 				<h2>Make a New Post</h2>
 				<form onSubmit={handleSubmit}>
 					<label>
-						Title: <input type="text" ref={title} />
+						Title: <br /> <input type="text" ref={title} className="title" />
 					</label>
 					<label>
-						Topic: <input type="text" ref={topic} />
+						Topic: <br /> <input type="text" ref={topic} className="topic" />
 					</label>
 					<label>
-						Entry: <input type="text" ref={entry} />
+						Entry: <br /> <input type="text" ref={entry} className="entry" />
 					</label>
 					<input type="submit" />
 				</form>
